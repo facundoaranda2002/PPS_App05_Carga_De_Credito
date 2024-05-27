@@ -1,0 +1,133 @@
+ion-content {
+    --background: url('../../../assets/fondo.jpeg') no-repeat center center/cover;
+    ion-img {
+        width: 25vh;
+        height: 25vh;
+        transform: translateY(15vh);         
+    }
+    ion-grid {
+        transform: translateY(25vh);
+        p {
+            margin-bottom: 5vh;
+            ion-label {
+                font-size: 2.1em;
+            }
+
+        }
+        ion-button {
+            ion-text {
+                font-size: 1.8em !important;
+            }
+        }
+    }
+
+    .gif{
+      background: transparent;
+      --background: transparent;
+      border: none;
+      --border-color: transparent;
+      --border-width: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      box-shadow: none;
+      --box-shadow: none;
+    }
+
+    ion-button.gif {
+      --ion-button-background: transparent;
+      --ion-button-border-width: 0;
+      --ion-button-box-shadow: none;
+      --ion-button-padding-start: 0;
+      --ion-button-padding-end: 0;
+    }
+
+    .gif iframe {
+      width: 400px;
+      height: 400px;
+      pointer-events: none; /* Esto asegura que los clics pasen al botón */
+      border: none;
+    }
+
+    h6{
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .arrow{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      ion-icon{
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    .credit{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    ion-button {
+      text-transform: none;
+    }
+      
+    ion-textarea {
+      --highlight-color-valid: --color: #e9e9e9;;
+      text-align: start;
+    }
+      
+    #qrImage {
+      padding: 20px 0;
+    }
+      
+    .qr-wrapper {
+      width: 230px;
+      min-height: 230px;
+      background: var(--ion-color-secondary);
+      border-radius: 20px;
+    }
+      
+    .qr-placeholder {
+      width: 60px;
+    }
+      
+    .d-flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .cardCreditos{
+      margin-top: 40px;
+      ion-card-content{
+        display: flex;
+        justify-content: center;
+        margin: 0 20px;
+      }
+    }
+
+    .btnBorrar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ion-button{
+        font-size: 30px;
+      }
+    }
+
+    .spinner
+    {
+      position: absolute;   top: 50%;   left: 50%;   transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+    }
+}

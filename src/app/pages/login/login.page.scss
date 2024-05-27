@@ -1,0 +1,57 @@
+ion-content {
+    --background: url('../../../assets/fondo.jpeg') no-repeat center center/cover;
+
+    ion-icon {
+        height: 3vh;
+        width: 3vh;
+    }
+
+
+    ion-header {
+        ion-toolbar {
+            --background: transparent;
+        }
+        ion-row {
+          margin: 6vh;
+          ion-label, p {
+              font-size: 2.8rem;
+              color: var(--ion-color-black);
+          }
+        }
+    }
+
+    
+
+    ion-list {
+        transform: translateY(12vh);
+        background: transparent;
+        ion-label{
+            font-size: 1.9em;
+        }
+        ion-item {
+            --background: transparent; 
+            ion-label {
+                font-weight: bold;
+                font-size: 1.9em;
+            }           
+            ion-input {
+                font-size: 1.4em;
+            }
+        }
+        .signin {
+            margin: 5vh 0;
+        }
+
+        .error {
+            font-size: 0.75em;
+        }
+        .featuredItems {
+            margin-top: 10vh;
+            ion-text {
+                font-weight: bold;
+                font-size: 1.4em;
+                text-decoration: underline;
+            }
+        }
+    }
+}

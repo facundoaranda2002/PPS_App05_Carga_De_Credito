@@ -1,0 +1,58 @@
+
+<ion-content [fullscreen]="true">
+
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button  (click)="goHome()" mode="md" color="black"  aria-label="Favorite">
+          <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-row>
+      <ion-label>
+        Crear
+        <p>Cuenta</p>
+      </ion-label>
+    </ion-row>
+  </ion-header>
+
+  <ion-list class="ion-padding-horizontal ion-margin-horizontal">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="ion-margin-bottom">
+        <ion-label color="black">Nombre de Usuario</ion-label>
+        <ion-item>
+          <ion-input color="black" placeholder="Ingrese aqui el Nombre de Usuario" type="text" formControlName="username"></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-margin-bottom">
+        <ion-label color="black">Email</ion-label>
+        <ion-item>
+          <ion-input color="black" placeholder="Ingrese aqui el Email" type="email" formControlName="email"></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-margin-bottom">
+        <ion-label color="black">Contraseña</ion-label>
+        <ion-item>
+          <ion-input color="black" placeholder="Ingrese aqui la Contraseña" type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </div> 
+      <ion-item lines="none" class="signin">
+        <ion-label color="black">
+          Registrarse
+        </ion-label>
+        <ion-button color="primary" slot="end" type="submit">
+          <ion-icon name="arrow-forward-outline" color="white"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-toast color="danger" [isOpen]="isToastOpen" message="Correo o contraseña incorrectos" [duration]="3000" (didDismiss)="setOpen(false)"></ion-toast>     
+    </form>
+
+    <ion-item lines="none" class="featuredItems">
+      <ion-text slot="start" color="black" (click)="goLogin()">Iniciar sesion</ion-text>
+    </ion-item>
+
+
+  </ion-list>  
+</ion-content>
+

@@ -1,0 +1,71 @@
+<ion-content [fullscreen]="true">
+
+  
+
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button  (click)="goHome()" mode="md" color="black"  aria-label="Favorite">
+          <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-row>
+      <ion-label>
+        Bienvenido
+        <p>De vuelta</p>
+      </ion-label>
+    </ion-row>
+  </ion-header>
+
+  <ion-list class="ion-padding-horizontal ion-margin-horizontal">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="ion-margin-bottom">
+        <ion-label color="black">Email</ion-label>
+        <ion-item>
+          <ion-input class="placeholder-color" placeholder="Ingrese el Email aqui" type="email" formControlName="email"></ion-input>
+        </ion-item>
+      </div>
+      <div class="ion-margin-bottom">
+        <ion-label color="black">Contraseña</ion-label>
+        <ion-item>
+          <ion-input class="placeholder-color" placeholder="Ingrese la Contraseña aqui" type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </div> 
+      <ion-item lines="none" class="signin">
+        <ion-label color="black">
+          Ingresar
+        </ion-label>
+        <ion-button color="primary" slot="end" aria-label="Favorite" type="submit">
+          <ion-icon name="arrow-forward-outline" color="white" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-item> 
+      <ion-toast color="danger" [isOpen]="isToastOpen" message="Correo o contraseña incorrectos" [duration]="3000" (didDismiss)="setOpen(false)"></ion-toast>    
+    </form>
+
+    <ion-item lines="none" class="featuredItems">
+      <ion-text slot="start" (click)="goRegister()" color="black">Registrarse</ion-text>
+    </ion-item>
+
+
+  </ion-list>  
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      +
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="tertiary" (click)="userA()">
+        1
+      </ion-fab-button>
+      <ion-fab-button color="success" (click)="userB()">
+        2
+      </ion-fab-button>
+      <ion-fab-button color="secondary" (click)="userC()">
+        3 
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+
